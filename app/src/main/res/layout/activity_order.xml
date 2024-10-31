@@ -27,13 +27,44 @@
             android:text="Food Name"
             android:textSize="18sp"
             android:layout_marginBottom="8dp"/>
-        <TextView
-            android:id="@+id/etFoodName"
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter food name - Get From List"
-            android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+                <!-- ImageView untuk Gambar Makanan -->
+                <ImageView
+                    android:id="@+id/ivFoodImage"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/batagor"
+                    android:layout_marginEnd="8dp"/>
+
+                <!-- TextView untuk Nama Makanan -->
+                <TextView
+                    android:id="@+id/etFoodName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter food name - Get From List"
+                    android:padding="12dp"/>
+                <!-- Menambahkan Tampilan Harga -->
+                <TextView
+                    android:id="@+id/tvFoodPriceLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Price:"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvFoodPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:layout_marginBottom="16dp"/>
+        </LinearLayout>
 
         <!-- Input Jumlah Porsi -->
         <TextView
@@ -51,7 +82,7 @@
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
-        <!-- Input Jumlah Porsi -->
+        <!-- Input Nama Pemesan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -66,7 +97,6 @@
             android:padding="12dp"
             android:layout_marginBottom="16dp"/>
 
-
         <!-- Input Catatan Tambahan -->
         <TextView
             android:layout_width="wrap_content"
@@ -80,15 +110,34 @@
             android:layout_height="wrap_content"
             android:hint="Enter any additional notes"
             android:padding="12dp"
-            android:layout_marginBottom="16dp"/>
+            android:layout_marginBottom="8dp"/>
 
         <!-- Tombol Order -->
         <Button
             android:id="@+id/btnOrder"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="8dp"
             android:text="Place Order"
             android:textColor="@android:color/white"
-            android:padding="12dp"/>
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="@color/logo_color"/>
+
+        <!-- Tombol Back -->
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_gravity="center"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:text="Back"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="@color/logo_color"/>
 
 </LinearLayout>

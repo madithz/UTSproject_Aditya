@@ -5,4 +5,6 @@
     <string name="login">Login\n</string>
     <string name="register">Register Here</string>
     <string name="food_list_title">Food and Beverages</string>
+    <string name="logo_desc">logo_description</string>
+    <string name="Submit">Submit</string>
 </resources>

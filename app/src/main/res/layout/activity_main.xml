@@ -6,61 +6,84 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginTop="25dp"
-    android:layout_marginLeft="25dp"
-    android:layout_marginRight="25dp"
-    android:layout_marginBottom="25dp"
+    android:padding="25dp"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <!-- Logo Aplikasi -->
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginBottom="32dp"/>
+    <!-- Box untuk Welcome Text dan Logo -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="32dp">
+
+        <!-- Welcome Text -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WELCOME TO"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:shadowColor="#80000000"
+            android:shadowDx="4"
+            android:shadowDy="4"
+            android:shadowRadius="2"
+            android:gravity="center" />
+
+        <!-- Logo Aplikasi -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/food_donation_8449978"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
 
     <!-- Username Field -->
     <EditText
         android:id="@+id/etUsername"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="@string/hint_username"
         android:drawableLeft="@drawable/ic_person"
+        android:drawablePadding="8dp"
         android:padding="12dp"
         android:layout_marginBottom="16dp"
-        android:inputType="text"/>
+        android:inputType="text" />
 
     <!-- Password Field -->
     <EditText
         android:id="@+id/etPassword"
-        android:layout_width="match_parent"
+        android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:hint="@string/hint_password"
         android:drawableLeft="@drawable/ic_lock"
+        android:drawablePadding="8dp"
         android:padding="12dp"
         android:layout_marginBottom="16dp"
-        android:inputType="textPassword"/>
+        android:inputType="textPassword" />
 
     <!-- Button Login -->
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:paddingTop="10dp"
+        android:backgroundTint="@color/logo_color"
         android:text="@string/login"
-        android:layout_gravity="center_horizontal"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="16dp"/>
+        android:gravity="center" />
 
     <!-- Register Link -->
-    <TextView
-        android:id="@+id/tvRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
         android:text="@string/register"
-        android:layout_gravity="center"
-        android:clickable="true"
-        android:focusable="true"/>
-
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:backgroundTint="@color/logo_color"/>
 </LinearLayout>
